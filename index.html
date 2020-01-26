@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -11,11 +12,25 @@
 		header{
 			    text-indent: 2vw;
 		}
+		.menuspace{
+			height: 5vw;
+		}
 		body{
 			background: #C7D5ED;
 		}
+		.bg-lightblue{
+			background: #C7D5ED;
+		}
+		.bg-darkerblue{
+			background: #41ade5;
+		}
 		div{
 			/*border: 1px dotted red;*/
+		}
+		#languages{
+			font-size: 5vw;
+			padding: 0;
+			margin-top: -1vw;
 		}
 		#banner-ad-head{
 			background: #E8EE2B;
@@ -67,16 +82,30 @@
     		padding: 0 2vw 0 2vw;
     		    /*text-indent: 2vw;*/
 		}
-		#banner h1{
-			position: absolute;
-			z-index: 2;
-			background-image: linear-gradient(155deg, #41ade5 , #C7D5ED00);
-			width: 100vw;
-			height: 5vw;
+		h1{
+			display: none;
+		}
+		#mymenu{
+			font-weight: bold;
+			position: fixed;
+			z-index: 3;
+			background-image: linear-gradient(155deg, #41ade5EE , #C7D5EDEE);
+			width: 100%;
+			height: 8vw;
 			vertical-align: middle;
-			line-height: 5vw;
+			line-height: 6vw;
 			font-size: 3vw;
 			text-indent: 4vw;
+			box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+		}
+		a.anchor {
+		    display: block;
+		    position: relative;
+		    top: -8vw;
+		    visibility: hidden;
+		}
+		.myicon{
+			font-size: 5vw;
 		}
 		#banner-img{
 			position: relative;
@@ -84,6 +113,27 @@
 		}
 		a {
 			color: inherit;
+		}
+
+		p {
+			font-weight: bold;
+			margin: 0;
+			padding: 3vw;
+			text-align: center;
+		}
+
+		@media only screen and (max-width: 400px) {
+		  aside{
+			position: absolute;
+			top: 19vw;
+			left: 28vw;
+		  }
+		  aside *{
+		  	font-size: 3vw;
+		  }
+		  div.container a{
+		  	font-size: 3vw;
+		  }
 		}
 	/*	.slanted:after, .slanted:before {
 		    background: inherit;
@@ -110,12 +160,12 @@
 	</style>
 </head>
 <body>
-	<header>
+<!-- 	<header>
 		<nav class="navbar navbar-dark bg-dark box-shadow">
 			<div class="container d-flex justify-content-between">
 	          <a href="#" class="navbar-brand d-flex align-items-center">
 	           <span class="iconify" data-icon="octicon-home" data-inline="false"></span>
-	            <strong>Ski School Miclaus</strong>
+	            <strong>Home</strong>
 	          </a>
 	           <a href="#" class="navbar-brand d-flex align-items-center">
 	           <span class="iconify" data-icon="octicon:device-mobile" data-inline="false"></span>
@@ -127,62 +177,192 @@
 	          </a>
 	        </div>
 		</nav>
-	</header>
-
-	<section id="banner">
+	</header> -->
+	<header>
+		
 		<h1>Ski School Miclaus 🎿</h1>
+		<nav id="mymenu">
+			<div class="container d-flex justify-content-between">
+				<a href="#" class="navbar-brand d-flex align-items-center">
+					<span class="myicon">🎿</span> Ski School Miclaus 
+				</a>
+				<a href="#contact" class="navbar-brand d-flex align-items-center">
+	          		<span class="myicon">📲</span> Contact
+	          	</a>
+				<a href="#offer" class="navbar-brand d-flex align-items-center">
+	          		<span class="myicon">⛷</span> Offer
+	          	</a>
+	      </div>
+		</nav>
+	</header>
+	<div class="menuspace"></div>
+	
+	<section id="banner">
+		
 		<div>
 			<img id="banner-img" src="img/andu feleac.jpg">
 		</div>
 		<aside>
-			<div id="banner-ad-head" class="slanted"><div class="non-slanted"><a href="#">Sezonul 2020</a></div></div>
-			<div id="banner-ad1" class="slanted"><div class="non-slanted"><a href="#">Feleac Incepatori/Nivel Mediu</a></div></div>
-			<div id="banner-ad2" class="slanted"><div class="non-slanted"><a href="#">Snow-Fest Les Deux Alpes 23-30 Martie</a></div></div>
+			<div id="banner-ad-head" class="slanted"><div class="non-slanted"><a href="#offer">Sezonul 2020</a></div></div>
+			<div id="banner-ad1" class="slanted"><div class="non-slanted"><a href="#offer-fleac">Feleac incepatori si nivel mediu</a></div></div>
+			<div id="banner-ad2" class="slanted"><div class="non-slanted"><a href="#offer-snowfest">Snow-Fest Les Deux Alpes, 21.-28. Martie</a></div></div>
 		</aside>
+		<div>
+		<div class="bg-light">
+			<p>We theach in the following languages both adults and children:
+			</p>
+			<p id="languages">🇷🇴 🇺🇸 🇩🇪</p>
+		</div>	
+		<div class="bg-lightblue">
+			<p>
+				Everyone who wishes to experience the feeling of breezing through the snow on their own is going to love working with us.
+			</p>
+		</div>
+		<div>
+			<img id="banner-img" src="img/hintertux1.jpg">
+		</div>
+		<div class="bg-light">
+			<p >
+				Want to join your friends on a ski trip to Austria? Or maybe Italy or even France? 
+			</p>
+				<p> The Miclaus Ski School gives you the right head start!
+				</p>
+		</div>
+		<div>
+			<img id="banner-img" src="img/golden-hour.jpg">
+		</div>
+		<div class="bg-lightblue">
+			<p >
+				Skiing allows you to enjoy a concert from your favorite band at 2500m above sea level and party with others at the yearly <a class="text-danger" href="https://www.snow-fest.ro/events/l2a">Snow Fest</a> (where we will be teaching as well).
+			</p>
+		</div>
+		<div class="bg-light">
+			<p>
+				Think about going on a romantic ski trip with your significant other 💞
+			</p>
+			<p>
+				We'll get them up and sliding down the slope in no time with dedicated private lessons!
+			</p>
+		</div>
+
 	</section>
 
-	<section id="offer">
-		<h2>Offer</h2>
+	<a class="anchor" id="offer"></a>
+	<section id="offer" class="bg-lightblue">
+		<h2 id="offer-feleac">Oferta scoala de schi Feleac</h2>
 		<div>
+			<p>
+				<a href="http://www.partiafeleacu.ro/" class="text-success">
+					Partia Feleacu este deschisa!
+					<br/>
+					<img src="img/logo-partiafeleacu-2.png">
+				</a>
+			</p>
+		</div>
+			<h3>Pentru ce ce sunt la inceput</h3>
+			<div>
 			<ul>
-				<li><a href="#">Oferta incepatori</a></li>
-				<li><a href="#">Oferta intermediari</a></li>
-				<li><a href="#">Oferta avansati</a></li>
+				<li>Prezentarea echipamentului</li>
+				<li>Poziția corecta de schi pentru inceput</li>
+				<li>Mersul in plug</li>
+				<li>Mersul in plug cu aducerea skiului din vale</li>
+				<li>Mers pe canturi (poze)</li>
+				<li>Poziția corecta de schi folosita zi de zi</li>
 			</ul>
-			<ul>
-				<li>Echipament prezentare</li>
-				<li>Plug</li>
-				<li>plug aducerea skiului din vale</li>
-				<li>mers pe canturi (poze)</li>
-				<li>Poziția (poze)</li>
-			</ul>
-			<h3>Feleac Incepatori/Nivel Mediu</h3>
-			<ul>
-				
-			</ul>
-			<h3>Snow-Fest Les Deux Alpes 23-30 Martie</h3>
-			<ul>
-				
-			</ul>
-			
-		</div>	
+				<h3>Pentru cei mai experimentati ;)</h3>
+					<ul>
+						<li>Perfectionarea poziției corecte de schi</li>
+						<li>Coboratul partiei si urcarea cu teleschiul</li>
+						<li>Balansul</li>
+						<li>Virajele cu schiurile paralele</li>
+					</ul>
+			</div>
+		</section>
+
+		<section id="offer" class="bg-light">
+		<h2 id="offer-snowfest">Oferta scoala de schi Snow Fest</h2>
+		<div>
+			<p>
+				<a href="https://www.snow-fest.ro/events/l2a" class="text-success">
+					<img style="width: 200px;" src="img/snow-fest.png">
+				</a>
+			</p>
+		</div>
+			<h3>Pentru ce ce sunt la inceput</h3>
+				<p>
+					Recomandam cel putin 1-2 lectii pe Feleac deoarece vrem sa savuram cu totii partiile extraordinare din Alpi. E pacat sa stai prima zi pe o partie de incepatori de aceeasi marime ca si Feleacul. Cu putina experienta se poate deja urca cu un telescaun mai sus si ne bucuram cu totii de privelistea superba in timp ce avansam cu schiatul.
+				</p>
+				<ul>
+					<li>Prezentarea specificului schiatului in Alpi sau statiuni mai mari</li>
+					<li>Prezentarea echipamentului</li>
+					<li>Poziția corecta de schi pentru inceput</li>
+					<li>Mersul in plug</li>
+					<li>Mersul in plug cu aducerea skiului din vale</li>
+					<li>Mers pe canturi (poze)</li>
+					<li>Poziția corecta de schi folosita zi de zi</li>
+				</ul>
+
+			<h3>Pentru cei mai experimentati ;)</h3>
+				<ul>
+					<li>Perfectionarea poziției corecte de schi</li>
+					<li>Coboratul partiei si urcarea cu teleschiul</li>
+					<li>Balansul</li>
+					<li>Virajele cu schiurile paralele</li>
+					<li>Schimbatul cantului si schiatul cu mai mare viteza si eleganta</li>
+				</ul>	
 	</section>
 
 	<section id="bio">
 		<h2>Your Instructors</h2>
-		
+		<p>The Miclaus brothers love skiing and they wish to gift this passion to others.
+ 		They are officially recognized ski instructors (monitor schi) having followed a romanian-austrian schi instructor training in 2019. </p>
+		<p>Big ski enthusiast, Andrei and Alex have been skiing since they were 4. They spent their first seasons of skiing in the mountains of baisoara, an hours drive from the beautiful city of Cluj-Napoca.
+		</p>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-sm">
+		    	<h3>Alex</h3>
+		    	He packs a punch when running the slopes backwards and riding his faithful T-Rex (you'll see I'm not joking). 
+		      	<p>
+					<img style="width: 100%;" src="img/andu-profile.JPG">
+				</p>
+
+		    </div>
+		    <div class="col-sm">
+		    	<h3>Andrei</h3>
+		    	Technique and proper motor function are his staples, smooth and controlled skiing is a guarantee.
+		      	<p>
+					<img style="width: 100%;" src="img/andrei-profile.JPG">
+				</p>
+		    </div>
+		  </div>
+		</div>
+<!-- 		<div class="container d-flex justify-content-between">
+			<p>
+				<img style="width: 100%;" src="img/andu-profile.JPG">
+			</p>
+			<p>
+				<img style="width: 100%;" src="img/andrei-profile.JPG">
+			</p>
+		</div> -->
+<p>		The courses are offered for all ages and levels during the 2020 season.* <br>
+
+*in limita locurilor disponibile si a situatiei meteorologice.
+</p>
+
 	</section>
 
 <footer>
-
-	<section id="contact">
+	<a class="anchor" id="contact"></a>
+	<section id="contact" class="bg-light">
 		<h2>Contact & Bookings</h2>
-		FB
-		Instagram
-		Telefone
+		<p>Telephone: +40 752 315 263</p>
+		<p>Facebook: Coming soon! Stay tuned</p>
+		<p>Instagram: : Coming soon! Stay tuned</p>
+		<img style="width: 100%;" src="img/andrei-andu.JPG">
 	</section>
-
 	
+
 </footer>
 
 </body>
